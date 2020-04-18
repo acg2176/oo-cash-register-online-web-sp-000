@@ -20,7 +20,7 @@ class CashRegister
       else
         self.items << title
       end
-    self.last_price << price
+    self.last_price << price * quantity
   end
 
   def items
@@ -41,8 +41,6 @@ class CashRegister
   def void_last_transaction
     self.items.pop()
     self.total -= self.last_price.pop()
-    if self.items == []
-      self.total = 0.0
     end
   end
 
