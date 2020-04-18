@@ -10,11 +10,12 @@ class CashRegister
   end
 
   def items
-    @items
+    @items = []
   end
 
   def add_item(title, price, quantity = 1)
     self.total += price * quantity
+    self.items << titlw
   end
 
   def apply_discount
@@ -26,4 +27,6 @@ class CashRegister
       "There is no discount to apply."
     end
   end
+
+
 end
