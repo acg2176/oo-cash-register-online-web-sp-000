@@ -22,6 +22,8 @@ class CashRegister
       total_discount = (self.discount * 0.01 * self.total).ceil
       self.total -= total_discount
       "After the discount, the total comes to $#{self.total}."
+    else
+      "There is no discount to apply."
     end
   end
 end
