@@ -43,6 +43,7 @@ class CashRegister
     self.total -= self.last_price.pop()
     if self.items = []
       self.total = 0
+    end
   end
 
 end
