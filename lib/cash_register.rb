@@ -2,13 +2,13 @@
 class CashRegister
   :cash_register
   :cash_register_with_discount
-  attr_accessor :total, :discount, :items, :last_item
+  attr_accessor :total, :discount, :items, :last_price
 
   def initialize(discount = discount)
     @total = 0
     @discount = discount
     @items = []
-    @last_item = []
+    @last_price = []
   end
 
   def add_item(title, price, quantity = 1)
@@ -20,8 +20,7 @@ class CashRegister
       else
         self.items << title
       end
-    self.last_item << title, price
-
+    self.last_price << price
   end
 
   def items
@@ -41,7 +40,7 @@ class CashRegister
 
   def void_last_transaction
     self.items.pop()
-    self.total -= price
+    self.total -= self.last_price.pop()
   end
 
 end
