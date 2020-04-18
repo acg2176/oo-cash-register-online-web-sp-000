@@ -16,9 +16,9 @@ class CashRegister
         quantity.times do |title|
           self.items << title
         end
+      else
+        self.items << title
       end
-    end
-    self.items << title
   end
 
   def items
