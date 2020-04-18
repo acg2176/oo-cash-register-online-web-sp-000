@@ -13,7 +13,7 @@ class CashRegister
   def add_item(title, price, quantity = 1)
     self.total += price * quantity
       if quantity > 1
-        quantity.times do |title|
+        quantity.times do
           self.items << title
         end
       else
